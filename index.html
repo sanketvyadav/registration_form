@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanket A-4</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<!--  -->
+
+<body>
+  <h2>Registration Form</h2>
+  <div class="form-container">
+    <form id="studentForm">
+      <label for="name">Student Name:</label>
+      <input type="text" id="name" required class="input" placeholder="Enter your Name" autofocus /><br /><br />
+
+      <label for="rollNo">Roll No:</label>
+      <input type="text" id="rollNo" required class="input" pattern="[0-9]+" maxlength="2" title="Please enter a valid roll number" />
+      <br /><br />
+
+      <label for="">Gender</label><br />
+      <input type="radio" name="gender" value="Male" id="male" required />Male
+      <br />
+      <input type="radio" name="gender" value="Female" id="female" required />Female<br />
+      <input type="radio" name="gender" value="Others" id="other" required />Other
+      <br />
+      <br /><br />
+
+      <label for="phone">Phone NO: </label>
+      <input type="text" id="phone" required class="input" pattern="[6789][0-9]{9}" title="Please enter valid Phone Number" maxlength="10" />
+      <br /><br />
+
+      <label for="date">Birth Date:</label>
+      <input type="date" id="date" required class="input" />
+      <br /><br />
+
+      <label for="age">Age:</label>
+      <input type="text" id="age" required class="input" pattern="[1-9][0-9]?|1[0-4][0-9]|150" maxlength="3" title="Please enter a valid +ve number" />
+      <br /><br />
+
+      <label for="mail">Email: </label>
+      <input type="email" id="mail" required class="input" />
+      <br /><br />
+
+      <label for="">Country</label><br />
+      <select id="country" required>
+        <option value="" disabled selected>Select your country</option>
+        <option>India</option>
+        <option>Bangladesh</option>
+        <option>Nepal</option>
+        <option>Bhutan</option>
+        <option>Pakistan</option>
+        <option>Sri Lanka</option>
+        <option>China</option>
+      </select>
+      <br /><br />
+
+      <label for="subjects">Subjects:</label><br /><br />
+      <input type="checkbox" id="subject1" value="Physics" />
+      <label for="subject1">Physics</label>
+      <input type="checkbox" id="subject2" value="Chemistry" />
+      <label for="subject2">Chemistry</label>
+      <input type="checkbox" id="subject3" value="Maths" />
+      <label for="subject3">Maths</label><br /><br />
+
+      <label for="img">Image: </label>
+      <input type="file" id="img" required class="input" />
+      <br /><br />
+
+      <button type="submit" id="button">Submit</button>
+
+      <div id="successMessage">
+        Form submitted successfully!
+        <i class="fa-regular fa-thumbs-up" style="color: #030303"></i>
+      </div>
+
+    </form>
+  </div><br><br>
+
+  <div class="btn">
+    <!-- <button id="convertToJsonBtn" class="button-17" onclick="jsonObject()">Convert to JSON Format</button>
+  <pre id="jsonData"></pre> -->
+
+    <button id="downloadJsonFile" class="button-17" onclick="downloadJson()">Download Json File <i class="fa-solid fa-circle-down fa-fade fa-xl" style="color: #000000;"></i></button>
+  </div>
+
+  <h2>Student Data</h2>
+  <table id="studentTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Roll No:</th>
+
+        <th>Gender</th>
+        <th>Mobile No</th>
+        <th>Date of Birth</th>
+        <th>Age</th>
+        <th>E-mail</th>
+        <th>Country</th>
+        <th>Subjects</th>
+        <th>Image</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
